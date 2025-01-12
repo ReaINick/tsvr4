@@ -9,51 +9,46 @@
 <body>
     <div id="app">
         <h1>My Clicker Game</h1>
-        
-        <!-- Currency Display -->
         <div class="currency-container">
             <div class="currency" v-if="gold > 0">
-                <img src="//i.imgur.com/mwXNT9U.png" alt="Gold Coin" class="coin-icon"> 
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/mwXNT9U"><a href="//imgur.com/a/mwXNT9U">Gold Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
                 <span class="currency-value">{{ Math.floor(gold) }}</span>
             </div>
             <div class="currency" v-if="silver > 0">
-                <img src="//i.imgur.com/ipjwrNL.png" alt="Silver Coin" class="coin-icon"> 
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/ipjwrNL"><a href="//imgur.com/a/ipjwrNL">Silver Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
                 <span class="currency-value">{{ Math.floor(silver) }}</span>
             </div>
             <div class="currency" v-if="diamond > 0">
-                <img src="//i.imgur.com/kfCeIO8.png" alt="Diamond Coin" class="coin-icon"> 
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/kfCeIO8"><a href="//imgur.com/a/kfCeIO8">Diamond Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
                 <span class="currency-value">{{ Math.floor(diamond) }}</span>
             </div>
             <div class="currency" v-if="platinum > 0">
-                <img src="//i.imgur.com/Qx4vDSd.png" alt="Platinum Coin" class="coin-icon"> 
+                <blockquote class="imgur-embed-pub" lang="en" data-id="a/Qx4vDSd"><a href="//imgur.com/a/Qx4vDSd">Platinum Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
                 <span class="currency-value">{{ Math.floor(platinum) }}</span>
             </div>
         </div>
 
-        <!-- Click Button -->
         <button @click="earnGold" class="click-button">Click Me!</button>
 
-        <!-- Number Display -->
+        <!-- Displaying the number in a rectangle -->
         <div class="number-display">{{ Math.floor(gold) }}</div>
 
         <!-- Shop Button -->
         <button @click="toggleShop" class="shop-button">
-            <img src="//i.imgur.com/Bq1QUpu.png" alt="Shop" />
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/Bq1QUpu"><a href="//imgur.com/a/Bq1QUpu">Shop</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
         </button>
 
         <!-- Shop Section -->
         <div v-if="showShop" class="shop-container">
             <h2>Shop</h2>
-            <!-- Upgrade Buttons -->
+            <!-- Upgrade buttons -->
             <button @click="upgradeScavenging">Upgrade Scavenging (Level: {{ scavengingLevel }})</button>
             <button @click="upgradeInventory">Upgrade Inventory (Level: {{ inventoryLevel }})</button>
-            <button @click="upgradeBetterDealers">Better Dealers Upgrade (Level: {{ betterDealersLevel }})</button>
+            <button @click="upgradeBetterDealers">Upgrade Better Dealers (Level: {{ betterDealersLevel }})</button>
         </div>
     </div>
 
-    <!-- Vue.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!-- Main JavaScript File -->
     <script src="main.js"></script>
 </body>
 </html>
