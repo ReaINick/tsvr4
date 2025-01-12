@@ -1,1 +1,33 @@
-t
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Clicker Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>My Clicker Game</h1>
+        <div class="counter">
+            <p>Gold Coins: {{ gold }}</p>
+            <p>Silver Coins: {{ silver }}</p>
+            <p>Diamond Coins: {{ diamond }}</p>
+            <p>Platinum Coins: {{ platinum }}</p>
+            <p>Fragments: {{ fragments }}</p>
+            <button @click="earnGold">Click Me!</button>
+        </div>
+        <div class="upgrades">
+            <h2>Upgrades</h2>
+            <div v-for="upgrade in upgrades" :key="upgrade.name" class="upgrade">
+                <div>{{ upgrade.name }} (Price: {{ upgrade.price }})</div>
+                <button @click="buyUpgrade(upgrade)" :disabled="!canAfford(upgrade)">Buy</button>
+            </div>
+        </div>
+        <button @click="ascend">Ascend</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="main.js"></script>
+</body>
+</html>
