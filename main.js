@@ -12,6 +12,7 @@ var app = new Vue({
         baseScavenging: 0.2,
         luck: 1, // Starting luck
         upgradeCost: 100, // Initial cost for upgrades
+        showShop: false // Control visibility of the shop
     },
     methods: {
         earnGold() {
@@ -88,6 +89,9 @@ var app = new Vue({
             } else {
                 alert("Not enough gold to upgrade Better Dealers!");
             }
+        },
+        toggleShop() {
+            this.showShop = !this.showShop; // Toggle shop visibility
         },
         formatNumber(num) {
             return Math.floor(num); // Return only whole numbers
