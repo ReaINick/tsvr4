@@ -11,22 +11,21 @@
         <h1>My Clicker Game</h1>
         
      <div class="currency" v-if="gold > 0">
-    <img src="https://www.imghippo.com/i/MYi6902cw.png" alt="Gold Coin" class="coin-icon"> 
+    <img src="https://i.imghippo.com/files/MYi6902cw.png" alt="Gold Coin" class="coin-icon"> 
     <span class="currency-value">{{ Math.floor(gold) }}</span>
 </div>
 <div class="currency" v-if="silver > 0">
-    <img src="https://www.imghippo.com/i/zyS7100eYE.png" alt="Silver Coin" class="coin-icon"> 
+    <img src="https://i.imghippo.com/files/zyS7100eYE.png" alt="Silver Coin" class="coin-icon"> 
     <span class="currency-value">{{ Math.floor(silver) }}</span>
 </div>
 <div class="currency" v-if="diamond > 0">
-    <img src="https://www.imghippo.com/i/slxe2811Yis.png" alt="Diamond Coin" class="coin-icon"> 
+    <img src="https://i.imghippo.com/files/slxe2811Yis.png" alt="Diamond Coin" class="coin-icon"> 
     <span class="currency-value">{{ Math.floor(diamond) }}</span>
 </div>
 <div class="currency" v-if="platinum > 0">
-    <img src="https://www.imghippo.com/i/eue3752AQ.png" alt="Platinum Coin" class="coin-icon"> 
+    <img src="https://i.imghippo.com/files/eue3752AQ.png" alt="Platinum Coin" class="coin-icon"> 
     <span class="currency-value">{{ Math.floor(platinum) }}</span>
 </div>
-
 
         <button @click="earnGold" class="click-button">Click Me!</button>
 
