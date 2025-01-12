@@ -30,3 +30,36 @@ body {
     border-radius: 5px;
     margin-top: 20px;
 }
+
+.click-button {
+    position: fixed; /* Fix position */
+    left: calc(50% - 100px); /* Center slightly left */
+    top: calc(50% - 50px); /* Center vertically */
+    padding: 15px;
+    font-size: 20px;
+}
+
+.shop-button {
+    position: fixed; /* Fix position */
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Position at the right */
+}
+
+.shop-container {
+    position: fixed; /* Fix position */
+    right: 0; /* Align to right */
+    top: 100px; /* Start below header */
+    width: calc(20%); /* Take up about one-fifth of screen width */
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.shop-container h2 {
+    text-align: center;
+}
+
+.shop-container button {
+    display: block; /* Stack buttons vertically */
+    margin-top: 10px; /* Space between buttons */
+}
