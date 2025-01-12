@@ -1,7 +1,14 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Cartoonish font */
+    background-color: #e0f7fa; /* Light blue background */
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #00796b; /* Dark teal for the title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .currency-container {
@@ -12,14 +19,23 @@ body {
 
 .currency {
     margin: 0 10px;
+    position: relative; /* For positioning the icon and value */
 }
 
 .coin-icon {
     width: 50px; /* Adjust size as needed */
+    transition: transform 0.2s; /* Smooth scaling effect on hover */
+}
+
+.coin-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 .currency-value {
     font-size: 24px;
+    color: #ffb300; /* Gold color for currency values */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
 
 .number-display {
@@ -29,6 +45,7 @@ body {
     padding: 10px;
     border-radius: 5px;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
 }
 
 .click-button {
@@ -37,22 +54,41 @@ body {
     top: calc(50% - 50px); /* Center vertically */
     padding: 15px;
     font-size: 20px;
+    background-color: #ff5722; /* Bright orange */
+    color: white;
+    border-radius: 10px; /* Rounded corners */
+    border: none; /* No border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.click-button:hover {
+    background-color: #e64a19; /* Darker orange on hover */
 }
 
 .shop-button {
     position: fixed; /* Fix position */
     bottom: 20px; /* Position at the bottom */
     right: 20px; /* Position at the right */
+    background-color: transparent; /* Transparent background for image button */
+}
+
+.shop-button img {
+    width: 60px; /* Adjust size as needed */
 }
 
 .shop-container {
     position: fixed; /* Fix position */
     right: 0; /* Align to right */
-    top: 100px; /* Start below header */
+    top: calc(100px); /* Start below header */
     width: calc(20%); /* Take up about one-fifth of screen width */
     background-color: rgba(255,255,255,0.9);
     border-radius: 8px;
     padding: 10px;
+    box-shadow: -4px -4px 10px rgba(255,255,255,1), 
+                -4px -4px 10px rgba(255,255,255,1),
+                -4px -4px rgba(255,255,255,.7),
+                inset -4px -4px rgba(255,255,255,.5);
 }
 
 .shop-container h2 {
@@ -62,4 +98,15 @@ body {
 .shop-container button {
     display: block; /* Stack buttons vertically */
     margin-top: 10px; /* Space between buttons */
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #00796b; /* Teal for buttons */
+    border-radius: 5px; 
+}
+
+.shop-container button:hover {
+   background-color:#004d40; 
+   transform : scale(1.05); 
+   transition : all .2s ease-in-out ;
 }
