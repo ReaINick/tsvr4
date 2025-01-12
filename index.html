@@ -10,32 +10,34 @@
     <div id="app">
         <h1>My Clicker Game</h1>
         
-     <div class="currency" v-if="gold > 0">
-    <img src="https://i.imghippo.com/files/MYi6902cw.png" alt="Gold Coin" class="coin-icon"> 
-    <span class="currency-value">{{ Math.floor(gold) }}</span>
-</div>
-<div class="currency" v-if="silver > 0">
-    <img src="https://i.imghippo.com/files/zyS7100eYE.png" alt="Silver Coin" class="coin-icon"> 
-    <span class="currency-value">{{ Math.floor(silver) }}</span>
-</div>
-<div class="currency" v-if="diamond > 0">
-    <img src="https://i.imghippo.com/files/slxe2811Yis.png" alt="Diamond Coin" class="coin-icon"> 
-    <span class="currency-value">{{ Math.floor(diamond) }}</span>
-</div>
-<div class="currency" v-if="platinum > 0">
-    <img src="https://i.imghippo.com/files/eue3752AQ.png" alt="Platinum Coin" class="coin-icon"> 
-    <span class="currency-value">{{ Math.floor(platinum) }}</span>
-</div>
+        <div class="currency-container">
+            <div class="currency" v-if="gold > 0">
+                <img src="GoldCoinAsset.png" alt="Gold Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(gold) }}</span>
+            </div>
+            <div class="currency" v-if="silver > 0">
+                <img src="SilverCoinAsset.png" alt="Silver Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(silver) }}</span>
+            </div>
+            <div class="currency" v-if="diamond > 0">
+                <img src="DiamondCoinAsset.png" alt="Diamond Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(diamond) }}</span>
+            </div>
+            <div class="currency" v-if="platinum > 0">
+                <img src="PlatinumCoinAsset.png" alt="Platinum Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(platinum) }}</span>
+            </div>
+        </div>
 
         <button @click="earnGold" class="click-button">Click Me!</button>
 
         <!-- Displaying the number in a rectangle -->
         <div class="number-display">{{ Math.floor(gold) }}</div>
 
-<!-- Shop Button -->
-<button @click="toggleShop" class="shop-button">
-    <img src="https://www.imghippo.com/i/HiXs1870lmQ.png" alt="Shop" />
-</button>
+        <!-- Shop Button -->
+        <button @click="toggleShop" class="shop-button">
+            <img src="ShopButtonAsset.png" alt="Shop" />
+        </button>
 
         <!-- Shop Section -->
         <div v-if="showShop" class="shop-container">
