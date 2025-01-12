@@ -9,35 +9,51 @@
 <body>
     <div id="app">
         <h1>My Clicker Game</h1>
+        
+        <!-- Currency Display -->
         <div class="currency-container">
             <div class="currency" v-if="gold > 0">
-                <img src="https://i.imgur.com/a/mwXNT9U.png" alt="Gold Coin" class="coin-icon"> 
-                <span class="currency-value">{{ formatNumber(gold) }}</span>
+                <img src="//i.imgur.com/mwXNT9U.png" alt="Gold Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(gold) }}</span>
             </div>
             <div class="currency" v-if="silver > 0">
-                <img src="https://i.imgur.com/a/ipjwrNL.png" alt="Silver Coin" class="coin-icon"> 
-                <span class="currency-value">{{ formatNumber(silver) }}</span>
+                <img src="//i.imgur.com/ipjwrNL.png" alt="Silver Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(silver) }}</span>
             </div>
             <div class="currency" v-if="diamond > 0">
-                <img src="https://i.imgur.com/a/kfCeIO8.png" alt="Diamond Coin" class="coin-icon"> 
-                <span class="currency-value">{{ formatNumber(diamond) }}</span>
+                <img src="//i.imgur.com/kfCeIO8.png" alt="Diamond Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(diamond) }}</span>
             </div>
             <div class="currency" v-if="platinum > 0">
-                <img src="https://i.imgur.com/a/Qx4vDSd.png" alt="Platinum Coin" class="coin-icon"> 
-                <span class="currency-value">{{ formatNumber(platinum) }}</span>
+                <img src="//i.imgur.com/Qx4vDSd.png" alt="Platinum Coin" class="coin-icon"> 
+                <span class="currency-value">{{ Math.floor(platinum) }}</span>
             </div>
         </div>
 
-        <button @click="earnGold">Click Me!</button>
+        <!-- Click Button -->
+        <button @click="earnGold" class="click-button">Click Me!</button>
 
-        <!-- Displaying the number -->
-        <div class="number-display">{{ formatNumber(gold) }}</div>
+        <!-- Number Display -->
+        <div class="number-display">{{ Math.floor(gold) }}</div>
 
-        <!-- Future upgrades section -->
-        <!-- Add upgrade buttons -->
+        <!-- Shop Button -->
+        <button @click="toggleShop" class="shop-button">
+            <img src="//i.imgur.com/Bq1QUpu.png" alt="Shop" />
+        </button>
+
+        <!-- Shop Section -->
+        <div v-if="showShop" class="shop-container">
+            <h2>Shop</h2>
+            <!-- Upgrade Buttons -->
+            <button @click="upgradeScavenging">Upgrade Scavenging (Level: {{ scavengingLevel }})</button>
+            <button @click="upgradeInventory">Upgrade Inventory (Level: {{ inventoryLevel }})</button>
+            <button @click="upgradeBetterDealers">Better Dealers Upgrade (Level: {{ betterDealersLevel }})</button>
+        </div>
     </div>
 
+    <!-- Vue.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Main JavaScript File -->
     <script src="main.js"></script>
 </body>
 </html>
