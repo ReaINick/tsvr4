@@ -9,6 +9,7 @@
 <body>
     <div id="app">
         <h1>My Clicker Game</h1>
+        
         <div class="currency-container">
             <div class="currency" v-if="gold > 0">
                 <blockquote class="imgur-embed-pub" lang="en" data-id="a/mwXNT9U"><a href="//imgur.com/a/mwXNT9U">Gold Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
@@ -41,10 +42,15 @@
         <!-- Shop Section -->
         <div v-if="showShop" class="shop-container">
             <h2>Shop</h2>
-            <!-- Upgrade buttons -->
-            <button @click="upgradeScavenging">Upgrade Scavenging (Level: {{ scavengingLevel }})</button>
-            <button @click="upgradeInventory">Upgrade Inventory (Level: {{ inventoryLevel }})</button>
-            <button @click="upgradeBetterDealers">Upgrade Better Dealers (Level: {{ betterDealersLevel }})</button>
+            <button @click="upgradeScavenging">Upgrade Scavenging (Level: {{ scavengingLevel }}) - Cost: {{ upgradeCost }}</button>
+            <button @click="upgradeInventory">Upgrade Inventory (Level: {{ inventoryLevel }}) - Cost: {{ upgradeCost }}</button>
+            <button @click="upgradeBetterDealers">Better Dealers Upgrade (Level: {{ betterDealersLevel }}) - Cost: {{ upgradeCost }}</button>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="info">
+            <p>Fragments: {{ fragments }}</p>
+            <p>Luck: {{ luck }}</p>
         </div>
     </div>
 
