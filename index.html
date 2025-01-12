@@ -10,34 +10,33 @@
     <div id="app">
         <h1>My Clicker Game</h1>
         
-        <div class="currency-container">
-            <div class="currency" v-if="gold > 0">
-                <blockquote class="imgur-embed-pub" lang="en" data-id="a/mwXNT9U"><a href="//imgur.com/a/mwXNT9U">Gold Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                <span class="currency-value">{{ Math.floor(gold) }}</span>
-            </div>
-            <div class="currency" v-if="silver > 0">
-                <blockquote class="imgur-embed-pub" lang="en" data-id="a/ipjwrNL"><a href="//imgur.com/a/ipjwrNL">Silver Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                <span class="currency-value">{{ Math.floor(silver) }}</span>
-            </div>
-            <div class="currency" v-if="diamond > 0">
-                <blockquote class="imgur-embed-pub" lang="en" data-id="a/kfCeIO8"><a href="//imgur.com/a/kfCeIO8">Diamond Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                <span class="currency-value">{{ Math.floor(diamond) }}</span>
-            </div>
-            <div class="currency" v-if="platinum > 0">
-                <blockquote class="imgur-embed-pub" lang="en" data-id="a/Qx4vDSd"><a href="//imgur.com/a/Qx4vDSd">Platinum Coin</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                <span class="currency-value">{{ Math.floor(platinum) }}</span>
-            </div>
-        </div>
+     <div class="currency" v-if="gold > 0">
+    <img src="https://www.imghippo.com/i/MYi6902cw.png" alt="Gold Coin" class="coin-icon"> 
+    <span class="currency-value">{{ Math.floor(gold) }}</span>
+</div>
+<div class="currency" v-if="silver > 0">
+    <img src="https://www.imghippo.com/i/zyS7100eYE.png" alt="Silver Coin" class="coin-icon"> 
+    <span class="currency-value">{{ Math.floor(silver) }}</span>
+</div>
+<div class="currency" v-if="diamond > 0">
+    <img src="https://www.imghippo.com/i/slxe2811Yis.png" alt="Diamond Coin" class="coin-icon"> 
+    <span class="currency-value">{{ Math.floor(diamond) }}</span>
+</div>
+<div class="currency" v-if="platinum > 0">
+    <img src="https://www.imghippo.com/i/eue3752AQ.png" alt="Platinum Coin" class="coin-icon"> 
+    <span class="currency-value">{{ Math.floor(platinum) }}</span>
+</div>
+
 
         <button @click="earnGold" class="click-button">Click Me!</button>
 
         <!-- Displaying the number in a rectangle -->
         <div class="number-display">{{ Math.floor(gold) }}</div>
 
-        <!-- Shop Button -->
-        <button @click="toggleShop" class="shop-button">
-            <blockquote class="imgur-embed-pub" lang="en" data-id="a/Bq1QUpu"><a href="//imgur.com/a/Bq1QUpu">Shop</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-        </button>
+<!-- Shop Button -->
+<button @click="toggleShop" class="shop-button">
+    <img src="https://www.imghippo.com/i/HiXs1870lmQ.png" alt="Shop" />
+</button>
 
         <!-- Shop Section -->
         <div v-if="showShop" class="shop-container">
